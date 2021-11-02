@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "f187be4c-0479-4363-91b6-2b8b94729582",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllAplicants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:11993/api/applicants/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11993",
+					"path": [
+						"api",
+						"applicants",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetApplicantById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:11993/api/applicants?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11993",
+					"path": [
+						"api",
+						"applicants"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetApplicantById",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:11993/api/applicants?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "11993",
+							"path": [
+								"api",
+								"applicants"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcVGFza1xBcHBsaWNhbnRTZXJ2aWNlXEFwcGxpY2FudHNBcGlcYXBpXGFwcGxpY2FudHM=?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Nov 2021 16:00:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "161"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ApplicantId\": 1,\n    \"Name\": \"samira saeed\",\n    \"FamilyName\": \"saeed\",\n    \"Age\": 27,\n    \"EMailAdress\": \"samira@aa.com\",\n    \"Address\": \"555888888888888\",\n    \"CountryOfOrigin\": \"665\",\n    \"Hired\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "GetApplicantByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:11993/api/applicants?name=postman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11993",
+					"path": [
+						"api",
+						"applicants"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "postman"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddNewApplicant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Name\":\"samira\",\r\n\"FamilyName\":\"saeed\",\"Age\":27,\r\n\"EMailAdress\":\"samira@aa.com\",\r\n\"Address\":\"Maadi ,cairo,egypt\",\r\n\"CountryOfOrigin\":\"Egypt\",\r\n\"Hired\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11993/api/applicants/Post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11993",
+					"path": [
+						"api",
+						"applicants",
+						"Post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateApplicant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"ApplicantId\":\"5\",\r\n\"Name\":\"samira\",\r\n\"FamilyName\":\"saeed\",\"Age\":27,\r\n\"EMailAdress\":\"samira@aa.com\",\r\n\"Address\":\"Maadi ,cairo,egypt\",\r\n\"CountryOfOrigin\":\"Egypt\",\r\n\"Hired\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11993/api/applicants/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11993",
+					"path": [
+						"api",
+						"applicants",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteApplicant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:11993/api/applicants/Delete?id=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11993",
+					"path": [
+						"api",
+						"applicants",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
