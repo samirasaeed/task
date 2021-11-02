@@ -6,7 +6,7 @@ sql server
 
 Steps
 
-1-Download the project code from
+1-Download the project code from https://github.com/samirasaeed/task
 2- run the attached script on sql server (script.sql)
 3-open the solution on the visual studio and run the api project
 to get the url port for the api 
